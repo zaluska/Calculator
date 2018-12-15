@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,6 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
+import Calculator_NataliiaZ.Implementations.Calculator;
 
 public class App {
 	/**
@@ -37,16 +41,15 @@ public class App {
 		// Creating panel for digits
 		JPanel panelDigits = new JPanel(new GridLayout(2, 2));
 		panelDigits.setFont(font);
+
 		JLabel label1 = new JLabel("First digit");
-		JTextField field1 = new JTextField();
-		// field1.setBounds(10, 10, 230, 50);
+		final JTextField field1 = new JTextField();
 
 		panelDigits.add(label1);
 		panelDigits.add(field1);
 
 		JLabel label2 = new JLabel("Second digit");
-		JTextField field2 = new JTextField();
-		// field2.setBounds(10, 10, 230, 50);
+		final JTextField field2 = new JTextField();
 
 		panelDigits.add(label2);
 		panelDigits.add(field2);
@@ -82,21 +85,74 @@ public class App {
 		panelOperations.add(button10);
 
 		frame.add(panelOperations, BorderLayout.CENTER);
-		
+
 		// Creation panel for result
-		JPanel panelResult= new JPanel(new GridLayout(2, 2));
+		JPanel panelResult = new JPanel(new GridLayout(2, 2));
 		panelResult.setBounds(10, 10, 230, 50);
-		
+
 		JLabel label4 = new JLabel("Result");
-		JTextField field3 = new JTextField();
-		
-		
+		final JTextField field3 = new JTextField();
+
 		panelResult.add(label4);
-		panelResult.add (field3);
-		
+		panelResult.add(field3);
+
 		frame.add(panelResult, BorderLayout.SOUTH);
-		
+
 		frame.setVisible(true);
-		
+
+		final Calculator calc = new Calculator();
+
+		button01.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.addition(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button02.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.subtraction(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button03.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.multiplication(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button04.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.division(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
 	}
+
 }
