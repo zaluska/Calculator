@@ -37,7 +37,7 @@ public class App {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
 		Font font = new Font("SanSerif", Font.BOLD, 20);
-		 
+
 		// Creating panel for digits
 		JPanel panelDigits = new JPanel(new GridLayout(2, 2));
 		panelDigits.setFont(font);
@@ -149,6 +149,80 @@ public class App {
 				double result = 0.0;
 
 				result = calc.division(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button05.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.procent(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button06.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double secondNumber = Double.parseDouble(field2.getText());
+				double result = 0.0;
+
+				result = calc.rnd(firstNumber, secondNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button07.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double result = 0.0;
+
+				result = calc.sqrt(firstNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button08.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double result = 0.0;
+
+				result = calc.power2(firstNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button09.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double result = 0.0;
+
+				result = calc.power3(firstNumber);
+
+				field3.setText(Double.toString(result));
+			}
+		});
+
+		button10.addActionListener(new ActionListener() // Adding ActionListener
+		{
+			public void actionPerformed(ActionEvent e) {
+				double firstNumber = Double.parseDouble(field1.getText());
+				double result = 0.0;
+
+				result = calc.abs(firstNumber);
 
 				field3.setText(Double.toString(result));
 			}

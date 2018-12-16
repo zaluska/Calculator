@@ -1,12 +1,16 @@
 package Calculator_NataliiaZ.Interfaces;
 
 public interface CalculatorAdvancedOperationsInterface {
-	
-	double rnd (double firstNumber, double secondNumber);
 
-	double subtraction(double firstNumber, double secondNumber);
+	double procent(double firstNumber, double secondNumber);
 
-	double multiplication(double firstNumber, double secondNumber);
+	double rnd(double firstNumber, double secondNumber);
 
-	double division(double firstNumber, double secondNumber);
+	double sqrt(double firstNumber);
+
+	double power2(double firstNumber);
+
+	double power3(double firstNumber);
+
+	double abs(double firstNumber);
 }
