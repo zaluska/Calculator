@@ -37,7 +37,7 @@ public class App {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
 		Font font = new Font("SanSerif", Font.BOLD, 20);
-
+		 
 		// Creating panel for digits
 		JPanel panelDigits = new JPanel(new GridLayout(2, 2));
 		panelDigits.setFont(font);
