@@ -26,8 +26,6 @@ public class App {
 	 * 
 	 * @param args
 	 */
-	// private static final Object FlowLayout = null;
-
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Calculator");
 
