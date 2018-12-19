@@ -135,25 +135,16 @@ public class CalculatorTests extends TestCase {
 	@Test
 	public void testRnd() {
 		// Arrange
-		double firstNumber = 0.0;
-		double secondNumber = 0.0;
-		double expected = 0.0;
-		double actual = 0.0;
+		double firstNumber = 10.0;
+		double secondNumber = 100.0;
 
-		Random rnd = new Random();
 		Calculator calculator = new Calculator();
 
 		// Act
-		for (int i = 0; i < 50; i++) {
-			firstNumber = rnd.nextDouble() * 100 - 50;
-			secondNumber = rnd.nextDouble() * 100 - 50;
-			expected = Math.random() * (secondNumber - firstNumber) + firstNumber;
+		double actual = calculator.rnd(firstNumber, secondNumber);
 
-			actual = calculator.rnd(firstNumber, secondNumber);
-
-			// Assert
-			assertEquals(expected, actual);
-		}
+		// Assert
+		assertTrue(actual >= firstNumber && actual <= secondNumber);
 	}
 
 	@Test
@@ -275,7 +266,7 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void testZeroMultiplication() {
 		// Arrange
@@ -290,22 +281,21 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void testZeroDivision() {
 		// Arrange
 		double firstNumber = 2.0;
 		double secondNumber = 0.0;
-		String expected = "Infinity";
 		Calculator calculator = new Calculator();
 
 		// Act
 		double actual = calculator.division(firstNumber, secondNumber);
 
 		// Assert
-		assertEquals(expected, actual);
+		assertTrue(Double.isInfinite(actual));
 	}
-	
+
 	@Test
 	public void testZeroProcent() {
 		// Arrange
@@ -320,22 +310,7 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-	
-	@Test
-	public void testZeroRnd() {
-		// Arrange
-		double firstNumber = 2.0;
-		double secondNumber = 0.0;
-	
-		Calculator calculator = new Calculator();
 
-		// Act
-		double actual = calculator.rnd(firstNumber, secondNumber);
-
-		// Assert
-		assertTrue(actual >= firstNumber && actual<= secondNumber);
-	}
-	
 	@Test
 	public void testZeroSqrt() {
 		// Arrange
@@ -349,7 +324,7 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void testZeroPower2() {
 		// Arrange
@@ -363,7 +338,7 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-		
+
 	@Test
 	public void testZeroPower3() {
 		// Arrange
@@ -377,7 +352,7 @@ public class CalculatorTests extends TestCase {
 		// Assert
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void testZeroAbs() {
 		// Arrange
@@ -392,6 +367,3 @@ public class CalculatorTests extends TestCase {
 		assertEquals(expected, actual);
 	}
 }
-	
-	
-	

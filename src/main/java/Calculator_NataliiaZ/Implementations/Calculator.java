@@ -34,7 +34,7 @@ public class Calculator implements CalculatorBasicOperationsInterface, Calculato
 	}
 
 	/**
-	 * Multiplicates two given numbers
+	 * Multiplies two given numbers
 	 * 
 	 * @param firstNumber  First argument
 	 * @param secondNumber Second argument
