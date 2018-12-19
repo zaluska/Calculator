@@ -7,7 +7,7 @@ import org.junit.Test;
 import Calculator_NataliiaZ.Implementations.Calculator;
 import junit.framework.TestCase;
 
-public class CalculatorTests extends TestCase {
+public class CalculatorTest extends TestCase {
 
 	// Creation unit tests that uses random input values in a loop-structure.
 	// Testing positive and negative values to each method.
