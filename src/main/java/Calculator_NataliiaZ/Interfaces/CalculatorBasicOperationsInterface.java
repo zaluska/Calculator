@@ -2,6 +2,7 @@ package Calculator_NataliiaZ.Interfaces;
 
 public interface CalculatorBasicOperationsInterface {
 
+	// Defining interface for basic operations
 	double addition(double firstNumber, double secondNumber);
 
 	double subtraction(double firstNumber, double secondNumber);

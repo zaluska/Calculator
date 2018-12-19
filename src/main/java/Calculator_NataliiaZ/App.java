@@ -27,6 +27,7 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// Creation and configuration main frame for calculator
 		JFrame frame = new JFrame("Calculator");
 
 		frame.setSize(500, 300);
@@ -36,7 +37,7 @@ public class App {
 		frame.setLayout(new BorderLayout());
 		Font font = new Font("SanSerif", Font.BOLD, 20);
 
-		// Creating panel for digits
+		// Creating panel with labels for digits
 		JPanel panelDigits = new JPanel(new GridLayout(2, 2));
 		panelDigits.setFont(font);
 
@@ -54,10 +55,11 @@ public class App {
 
 		frame.add(panelDigits, BorderLayout.NORTH);
 
-		// Creation panel for operation
+		// Creation panel for operations
 		JPanel panelOperations = new JPanel(new FlowLayout());
 		panelOperations.setSize(100, 100);
 
+		// Creation and adding buttons
 		JLabel label3 = new JLabel("Operations:");
 		JButton button01 = new JButton("+");
 		JButton button02 = new JButton("-");
@@ -100,8 +102,8 @@ public class App {
 
 		final Calculator calc = new Calculator();
 
-		button01.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.addition method
+		button01.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -113,8 +115,8 @@ public class App {
 			}
 		});
 
-		button02.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.subtraction method
+		button02.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -126,8 +128,8 @@ public class App {
 			}
 		});
 
-		button03.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.multiplication method
+		button03.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -139,8 +141,8 @@ public class App {
 			}
 		});
 
-		button04.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.division method
+		button04.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -152,8 +154,8 @@ public class App {
 			}
 		});
 
-		button05.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.procent method
+		button05.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -165,8 +167,8 @@ public class App {
 			}
 		});
 
-		button06.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.rnd method
+		button06.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double secondNumber = Double.parseDouble(field2.getText());
@@ -178,8 +180,8 @@ public class App {
 			}
 		});
 
-		button07.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.sqrt method
+		button07.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double result = 0.0;
@@ -190,8 +192,8 @@ public class App {
 			}
 		});
 
-		button08.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.power2 method
+		button08.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double result = 0.0;
@@ -202,8 +204,8 @@ public class App {
 			}
 		});
 
-		button09.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.power3 method
+		button09.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double result = 0.0;
@@ -214,8 +216,8 @@ public class App {
 			}
 		});
 
-		button10.addActionListener(new ActionListener() // Adding ActionListener
-		{
+		// Adding ActionListener that will call calc.abs method
+		button10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double firstNumber = Double.parseDouble(field1.getText());
 				double result = 0.0;

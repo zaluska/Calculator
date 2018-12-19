@@ -9,6 +9,9 @@ import junit.framework.TestCase;
 
 public class CalculatorTests extends TestCase {
 
+	// Creation unit tests that uses random input values in a loop-structure.
+	// Testing positive and negative values to each method.
+
 	@Test
 	public void testAddition() {
 		// Arrange
@@ -240,4 +243,155 @@ public class CalculatorTests extends TestCase {
 			assertEquals(expected, actual);
 		}
 	}
+
+	// Creation unit tests to each method that uses zero values for one of the
+	// numbers.
+	@Test
+	public void testZeroAddition() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+		double expected = 2.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.addition(firstNumber, secondNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testZeroSubtraction() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+		double expected = 2.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.subtraction(firstNumber, secondNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroMultiplication() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.multiplication(firstNumber, secondNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroDivision() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+		String expected = "Infinity";
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.division(firstNumber, secondNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroProcent() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.procent(firstNumber, secondNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroRnd() {
+		// Arrange
+		double firstNumber = 2.0;
+		double secondNumber = 0.0;
+	
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.rnd(firstNumber, secondNumber);
+
+		// Assert
+		assertTrue(actual >= firstNumber && actual<= secondNumber);
+	}
+	
+	@Test
+	public void testZeroSqrt() {
+		// Arrange
+		double firstNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.sqrt(firstNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroPower2() {
+		// Arrange
+		double firstNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.power2(firstNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+		
+	@Test
+	public void testZeroPower3() {
+		// Arrange
+		double firstNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.power3(firstNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testZeroAbs() {
+		// Arrange
+		double firstNumber = 0.0;
+		double expected = 0.0;
+		Calculator calculator = new Calculator();
+
+		// Act
+		double actual = calculator.abs(firstNumber);
+
+		// Assert
+		assertEquals(expected, actual);
+	}
 }
+	
+	
+	

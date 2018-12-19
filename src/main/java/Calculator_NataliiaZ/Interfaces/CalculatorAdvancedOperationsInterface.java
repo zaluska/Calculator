@@ -2,6 +2,7 @@ package Calculator_NataliiaZ.Interfaces;
 
 public interface CalculatorAdvancedOperationsInterface {
 
+	// Defining interface for advanced operations
 	double procent(double firstNumber, double secondNumber);
 
 	double rnd(double firstNumber, double secondNumber);
