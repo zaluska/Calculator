@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculator,Calculator_NataliiaZ.Implementations,Calculator,0,87,0,0,0,31,0,11,0,11
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},30,0,0,0,6,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App,327,0,0,0,64,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},30,0,0,0,6,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},30,0,0,0,6,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},30,0,0,0,6,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0
+calculator,Calculator_NataliiaZ,App.new ActionListener() {...},39,0,0,0,7,0,2,0,2,0

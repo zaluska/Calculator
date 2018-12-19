@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator</a> &gt; <a href="index.source.html" class="el_package">Calculator_NataliiaZ</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package Calculator_NataliiaZ;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import Calculator_NataliiaZ.Implementations.Calculator;
+
+<span class="nc" id="L23">public class App {</span>
+	/**
+	 * Main entrance point of the program
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Creation and configuration main frame for calculator
+<span class="nc" id="L31">		JFrame frame = new JFrame(&quot;Calculator&quot;);</span>
+
+<span class="nc" id="L33">		frame.setSize(500, 300);</span>
+<span class="nc" id="L34">		frame.setLocationRelativeTo(null);</span>
+<span class="nc" id="L35">		frame.setResizable(false);</span>
+<span class="nc" id="L36">		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L37">		frame.setLayout(new BorderLayout());</span>
+<span class="nc" id="L38">		Font font = new Font(&quot;SanSerif&quot;, Font.BOLD, 20);</span>
+
+		// Creating panel with labels for digits
+<span class="nc" id="L41">		JPanel panelDigits = new JPanel(new GridLayout(2, 2));</span>
+<span class="nc" id="L42">		panelDigits.setFont(font);</span>
+
+<span class="nc" id="L44">		JLabel label1 = new JLabel(&quot;First digit&quot;);</span>
+<span class="nc" id="L45">		final JTextField field1 = new JTextField();</span>
+
+<span class="nc" id="L47">		panelDigits.add(label1);</span>
+<span class="nc" id="L48">		panelDigits.add(field1);</span>
+
+<span class="nc" id="L50">		JLabel label2 = new JLabel(&quot;Second digit&quot;);</span>
+<span class="nc" id="L51">		final JTextField field2 = new JTextField();</span>
+
+<span class="nc" id="L53">		panelDigits.add(label2);</span>
+<span class="nc" id="L54">		panelDigits.add(field2);</span>
+
+<span class="nc" id="L56">		frame.add(panelDigits, BorderLayout.NORTH);</span>
+
+		// Creation panel for operations
+<span class="nc" id="L59">		JPanel panelOperations = new JPanel(new FlowLayout());</span>
+<span class="nc" id="L60">		panelOperations.setSize(100, 100);</span>
+
+		// Creation and adding buttons
+<span class="nc" id="L63">		JLabel label3 = new JLabel(&quot;Operations:&quot;);</span>
+<span class="nc" id="L64">		JButton button01 = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L65">		JButton button02 = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L66">		JButton button03 = new JButton(&quot;*&quot;);</span>
+<span class="nc" id="L67">		JButton button04 = new JButton(&quot;/&quot;);</span>
+<span class="nc" id="L68">		JButton button05 = new JButton(&quot;%&quot;);</span>
+<span class="nc" id="L69">		JButton button06 = new JButton(&quot;rnd&quot;);</span>
+<span class="nc" id="L70">		JButton button07 = new JButton(&quot;sqrt&quot;);</span>
+<span class="nc" id="L71">		JButton button08 = new JButton(&quot;^2&quot;);</span>
+<span class="nc" id="L72">		JButton button09 = new JButton(&quot;^3&quot;);</span>
+<span class="nc" id="L73">		JButton button10 = new JButton(&quot;abs&quot;);</span>
+
+<span class="nc" id="L75">		panelOperations.add(label3);</span>
+<span class="nc" id="L76">		panelOperations.add(button01);</span>
+<span class="nc" id="L77">		panelOperations.add(button02);</span>
+<span class="nc" id="L78">		panelOperations.add(button03);</span>
+<span class="nc" id="L79">		panelOperations.add(button04);</span>
+<span class="nc" id="L80">		panelOperations.add(button05);</span>
+<span class="nc" id="L81">		panelOperations.add(button06);</span>
+<span class="nc" id="L82">		panelOperations.add(button07);</span>
+<span class="nc" id="L83">		panelOperations.add(button08);</span>
+<span class="nc" id="L84">		panelOperations.add(button09);</span>
+<span class="nc" id="L85">		panelOperations.add(button10);</span>
+
+<span class="nc" id="L87">		frame.add(panelOperations, BorderLayout.CENTER);</span>
+
+		// Creation panel for result
+<span class="nc" id="L90">		JPanel panelResult = new JPanel(new GridLayout(2, 2));</span>
+<span class="nc" id="L91">		panelResult.setBounds(10, 10, 230, 50);</span>
+
+<span class="nc" id="L93">		JLabel label4 = new JLabel(&quot;Result&quot;);</span>
+<span class="nc" id="L94">		final JTextField field3 = new JTextField();</span>
+
+<span class="nc" id="L96">		panelResult.add(label4);</span>
+<span class="nc" id="L97">		panelResult.add(field3);</span>
+
+<span class="nc" id="L99">		frame.add(panelResult, BorderLayout.SOUTH);</span>
+
+<span class="nc" id="L101">		frame.setVisible(true);</span>
+
+<span class="nc" id="L103">		final Calculator calc = new Calculator();</span>
+
+		// Adding ActionListener that will call calc.addition method
+<span class="nc" id="L106">		button01.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L108">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L109">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L110">				double result = 0.0;</span>
+
+<span class="nc" id="L112">				result = calc.addition(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L114">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L115">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.subtraction method
+<span class="nc" id="L119">		button02.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L121">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L122">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L123">				double result = 0.0;</span>
+
+<span class="nc" id="L125">				result = calc.subtraction(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L127">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L128">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.multiplication method
+<span class="nc" id="L132">		button03.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L134">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L135">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L136">				double result = 0.0;</span>
+
+<span class="nc" id="L138">				result = calc.multiplication(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L140">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L141">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.division method
+<span class="nc" id="L145">		button04.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L147">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L148">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L149">				double result = 0.0;</span>
+
+<span class="nc" id="L151">				result = calc.division(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L153">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L154">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.procent method
+<span class="nc" id="L158">		button05.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L160">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L161">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L162">				double result = 0.0;</span>
+
+<span class="nc" id="L164">				result = calc.procent(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L166">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L167">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.rnd method
+<span class="nc" id="L171">		button06.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L173">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L174">				double secondNumber = Double.parseDouble(field2.getText());</span>
+<span class="nc" id="L175">				double result = 0.0;</span>
+
+<span class="nc" id="L177">				result = calc.rnd(firstNumber, secondNumber);</span>
+
+<span class="nc" id="L179">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L180">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.sqrt method
+<span class="nc" id="L184">		button07.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L186">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L187">				double result = 0.0;</span>
+
+<span class="nc" id="L189">				result = calc.sqrt(firstNumber);</span>
+
+<span class="nc" id="L191">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L192">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.power2 method
+<span class="nc" id="L196">		button08.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L198">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L199">				double result = 0.0;</span>
+
+<span class="nc" id="L201">				result = calc.power2(firstNumber);</span>
+
+<span class="nc" id="L203">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L204">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.power3 method
+<span class="nc" id="L208">		button09.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L210">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L211">				double result = 0.0;</span>
+
+<span class="nc" id="L213">				result = calc.power3(firstNumber);</span>
+
+<span class="nc" id="L215">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L216">			}</span>
+		});
+
+		// Adding ActionListener that will call calc.abs method
+<span class="nc" id="L220">		button10.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L222">				double firstNumber = Double.parseDouble(field1.getText());</span>
+<span class="nc" id="L223">				double result = 0.0;</span>
+
+<span class="nc" id="L225">				result = calc.abs(firstNumber);</span>
+
+<span class="nc" id="L227">				field3.setText(Double.toString(result));</span>
+<span class="nc" id="L228">			}</span>
+		});
+<span class="nc" id="L230">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

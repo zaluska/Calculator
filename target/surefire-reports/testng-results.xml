@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="19" passed="19">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="79" started-at="2018-12-19T22:01:56Z" finished-at="2018-12-19T22:01:56Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="79" started-at="2018-12-19T22:01:56Z" finished-at="2018-12-19T22:01:56Z">
+      <class name="Calculator_NataliiaZ.CalculatorTest">
+        <test-method status="PASS" signature="testZeroPower2()[pri:0, instance:testZeroPower2(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroPower2" duration-ms="10" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroPower2 -->
+        <test-method status="PASS" signature="testZeroPower3()[pri:0, instance:testZeroPower3(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroPower3" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroPower3 -->
+        <test-method status="PASS" signature="testAbs()[pri:0, instance:testAbs(Calculator_NataliiaZ.CalculatorTest)]" name="testAbs" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAbs -->
+        <test-method status="PASS" signature="testZeroProcent()[pri:0, instance:testZeroProcent(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroProcent" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroProcent -->
+        <test-method status="PASS" signature="testRnd()[pri:0, instance:testRnd(Calculator_NataliiaZ.CalculatorTest)]" name="testRnd" duration-ms="1" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRnd -->
+        <test-method status="PASS" signature="testSqrt()[pri:0, instance:testSqrt(Calculator_NataliiaZ.CalculatorTest)]" name="testSqrt" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqrt -->
+        <test-method status="PASS" signature="testZeroAbs()[pri:0, instance:testZeroAbs(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroAbs" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroAbs -->
+        <test-method status="PASS" signature="testProcent()[pri:0, instance:testProcent(Calculator_NataliiaZ.CalculatorTest)]" name="testProcent" duration-ms="1" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProcent -->
+        <test-method status="PASS" signature="testZeroDivision()[pri:0, instance:testZeroDivision(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroDivision" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroDivision -->
+        <test-method status="PASS" signature="testDivision()[pri:0, instance:testDivision(Calculator_NataliiaZ.CalculatorTest)]" name="testDivision" duration-ms="1" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivision -->
+        <test-method status="PASS" signature="testMultiplication()[pri:0, instance:testMultiplication(Calculator_NataliiaZ.CalculatorTest)]" name="testMultiplication" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplication -->
+        <test-method status="PASS" signature="testAddition()[pri:0, instance:testAddition(Calculator_NataliiaZ.CalculatorTest)]" name="testAddition" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddition -->
+        <test-method status="PASS" signature="testPower2()[pri:0, instance:testPower2(Calculator_NataliiaZ.CalculatorTest)]" name="testPower2" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPower2 -->
+        <test-method status="PASS" signature="testPower3()[pri:0, instance:testPower3(Calculator_NataliiaZ.CalculatorTest)]" name="testPower3" duration-ms="1" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPower3 -->
+        <test-method status="PASS" signature="testZeroSqrt()[pri:0, instance:testZeroSqrt(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroSqrt" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroSqrt -->
+        <test-method status="PASS" signature="testSubtraction()[pri:0, instance:testSubtraction(Calculator_NataliiaZ.CalculatorTest)]" name="testSubtraction" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtraction -->
+        <test-method status="PASS" signature="testZeroSubtraction()[pri:0, instance:testZeroSubtraction(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroSubtraction" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroSubtraction -->
+        <test-method status="PASS" signature="testZeroMultiplication()[pri:0, instance:testZeroMultiplication(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroMultiplication" duration-ms="1" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroMultiplication -->
+        <test-method status="PASS" signature="testZeroAddition()[pri:0, instance:testZeroAddition(Calculator_NataliiaZ.CalculatorTest)]" name="testZeroAddition" duration-ms="0" started-at="2018-12-19T23:01:56Z" finished-at="2018-12-19T23:01:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroAddition -->
+      </class> <!-- Calculator_NataliiaZ.CalculatorTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
